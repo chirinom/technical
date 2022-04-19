@@ -3,10 +3,7 @@ const state = {
   ttodos: []
 }
 const getters = {
-  allTodos: (state) => state.todos,
-  doneTodos: (state) => {
-    return state.ttodos.filter((todo) => todo.isDone).length
-  }
+  allTodos: (state) => state.todos
 }
 const actions = {
   addTodo ({ commit }, input) {
@@ -26,6 +23,9 @@ const actions = {
   },
   showAll ({ commit }) {
     commit('SHOW_ALL')
+  },
+  searchList ({ commit }, input) {
+    commit('SEARCH_LIST', input)
   }
 }
 const mutations = {
@@ -56,6 +56,9 @@ const mutations = {
   },
   SHOW_ALL (state) {
     state.todos = state.ttodos
+  },
+  SEARCH_LIST (state, input) {
+    state.todos = state.ttodos.filter((todo) => todo.name.includes(input.target.value))
   }
 }
 

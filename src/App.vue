@@ -1,7 +1,6 @@
 <template>
   <div id="app" class="container">
     <h2>My Todo list</h2>
-    <div>Done todos: {{ doneTodos }}</div>
     <TodoInput/>
     <TodoFilters/>
     <TodoList />
@@ -12,7 +11,6 @@
 import TodoInput from './components/TodoInput.vue'
 import TodoFilters from './components/TodoFilters.vue'
 import TodoList from './components/TodoList.vue'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'App',
@@ -20,9 +18,6 @@ export default {
     TodoInput,
     TodoFilters,
     TodoList
-  },
-  computed: {
-    ...mapGetters(['doneTodos'])
   }
 }
 </script>

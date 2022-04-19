@@ -29,7 +29,7 @@
             <button
               class="btn btn-warning btn-small ms-2"
               @click="
-                setUpdateTodo(todo);
+                updateTodo(todo);
                 handleUpdate(index);
               "
             >
@@ -37,7 +37,7 @@
             </button>
             <button
               class="btn btn-danger btn-small ms-2"
-              @click="setRemoveTodo(index)"
+              @click="removeTodo(index)"
             >
               Delete
             </button>
@@ -63,12 +63,6 @@ export default {
   },
   methods: {
     ...mapActions(['removeTodo', 'updateTodo']),
-    setRemoveTodo (index) {
-      this.removeTodo(index)
-    },
-    setUpdateTodo (todo) {
-      this.updateTodo(todo)
-    },
     handleUpdate (index) {
       if (this.isEditing === index) {
         this.isEditing = null
