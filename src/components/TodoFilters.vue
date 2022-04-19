@@ -25,7 +25,8 @@ span {
   margin: 8px 12px;
   font-size: 12px;
   &:hover {
-    font-weight: bolder;
+    font-weight: bold;
+
   }
 }
 </style>
