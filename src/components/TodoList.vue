@@ -2,9 +2,9 @@
   <div class="hello">
     <ul class="list-group mt-3">
       <li
-          class="list-group-item"
-          v-for="(todo, index) in allTodos"
-          :key="index"
+        class="list-group-item"
+        v-for="(todo, index) in allTodos"
+        :key="index"
       >
         <div class="row justify-content-between align-items-center">
           <div class="col-6">
@@ -33,7 +33,7 @@
                 handleUpdate(index);
               "
             >
-              {{ isEditing === index ? "Save" : "Edit" }}
+            {{ isEditing === index ? "Save" : "Edit" }}
             </button>
             <button
               class="btn btn-danger btn-small ms-2"

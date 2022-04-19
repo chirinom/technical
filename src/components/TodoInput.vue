@@ -6,7 +6,7 @@
     <div class="col">
       <button
           class="btn btn-primary"
-          @click="setAddTodo(input)"
+          @click="addTodo(input)"
       >
           Add todo
       </button>
@@ -27,10 +27,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addTodo']),
-    setAddTodo (input) {
-      this.addTodo(input)
-    }
+    ...mapActions(['addTodo'])
   }
 }
 </script>
