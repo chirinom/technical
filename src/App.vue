@@ -21,11 +21,6 @@ export default {
     TodoFilters,
     TodoList
   },
-  data () {
-    return {
-      input: ''
-    }
-  },
   computed: {
     ...mapGetters(['doneTodos'])
   }

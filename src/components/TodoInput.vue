@@ -1,14 +1,14 @@
 <template>
   <div class="row">
     <div class="col-6">
-        <input v-model="input" class="form-control" />
+       <input v-model="input" class="form-control" />
     </div>
     <div class="col">
       <button
-          class="btn btn-primary"
-          @click="addTodo(input)"
+        class="btn btn-primary"
+        @click="addTodo(input)"
       >
-          Add todo
+        Add todo
       </button>
     </div>
   </div>
